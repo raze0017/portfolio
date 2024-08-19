@@ -1,0 +1,54 @@
+.side-menu {
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: none;
+  padding-top: 50px;
+  transition: 0.3s;
+  z-index: 900;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 30px;
+}
+.side-menu a {
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+.side-menu a:hover {
+  opacity: 0.75;
+}
+
+.side-menu a.active {
+  opacity: 0.75;
+}
+
+.menu-button {
+  top: 50%;
+  left: 0px;
+  position: fixed;
+  font-size: 3em;
+  z-index: 10; /* Ensure it is above other elements */
+  transition: 0.3s;
+  animation: pulse 1.5s ease-in 0.1s infinite;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
