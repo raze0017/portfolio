@@ -1,5 +1,20 @@
 import './css/styles.css';
 import './css/addtional.css';
+import './css/iconstyles.css';
+import htmlIcon from './icons/html.png'; // Import the image
+import cssIcon from './icons/css.png'; // Import the image
+import c from './icons/c.png'; // Import the image
+import js from './icons/js.png'; // Import the image
+import python from './icons/python.png'; // Import the image
+import java from './icons/java.png'; // Import the image
+
+// Set the image source dynamically
+document.getElementById('html-icon').src = htmlIcon;
+document.getElementById('css-icon').src = cssIcon;
+document.getElementById('js').src = js;
+document.getElementById('c').src = c;
+document.getElementById('python').src = python;
+document.getElementById('java').src = java;
 
 const but = document.querySelector('.menu-button');
 const menu = document.querySelector('.side-menu');
@@ -13,7 +28,7 @@ but.addEventListener('click', () => {
   } else {
     menu.style.left = '-250px';
     body.style.left = '0px';
-    but.style.left = '0px';
+    but.style.left = '5px';
   }
 });
 
@@ -35,4 +50,16 @@ document.querySelectorAll('.menu-item').forEach((item) => {
       behavior: 'smooth',
     });
   });
+});
+const more = document.querySelector('.more');
+
+const detailed = document.querySelector('.detailed');
+more.addEventListener('click', () => {
+  if (detailed.style.right == '-500px') {
+    detailed.style.right = '50px';
+    body.style.left = '-800px';
+  } else {
+    detailed.style.right = '-500px';
+    body.style.left = '0px';
+  }
 });
