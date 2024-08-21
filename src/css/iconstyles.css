@@ -1,7 +1,15 @@
+#me {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 10px solid yellow;
+}
 .me {
-  display: inline-block;
-  color: black;
-  background-color: green;
-  transform: rotate(-90deg);
-  font-size: 16px;
+  position: relative;
+  left: 0px; /* Move 200px to the left */
+  top: 350px; /* Move 100px down */
+  transition: 1s;
+}
+.right1 {
+  transition: 1s;
 }

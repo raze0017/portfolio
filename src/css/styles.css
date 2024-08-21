@@ -87,3 +87,10 @@ header {
   transform: rotate(-90deg);
   font-size: 16px;
 }
+.detailed {
+  display: flex;
+  justify-content: space-between;
+}
+.text1 {
+  z-index: 900;
+}
