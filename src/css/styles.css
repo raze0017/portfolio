@@ -27,13 +27,14 @@ body {
   width: 10%;
   height: 600px;
 }
+
 .right1 {
   width: 90%;
   height: 600px;
   margin-right: 20px;
   background-color: rgb(154, 127, 16);
   color: white;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 600;
   line-height: 1;
   display: flex;
@@ -41,6 +42,15 @@ body {
   justify-content: center;
   flex-direction: column;
   padding-left: 50px;
+  font-family: monospace;
+}
+.hi {
+  transform: translateX(-275px);
+  color: rgba(136, 13, 13, 0.849);
+  transition: 2s;
+}
+.spec {
+  color: rgb(135, 0, 0);
 }
 .name {
   font-size: 2.5em;
@@ -92,5 +102,174 @@ header {
   justify-content: space-between;
 }
 .text1 {
+  left: -50px;
   z-index: 900;
+}
+#projects {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide overflow to only show the sliding images */
+  height: 100vh; /* Make the height relative to the viewport */
+}
+.container {
+  background-color: rgb(30, 144, 189);
+  width: 80%;
+  height: 550px;
+  margin-left: 80px;
+}
+.balance {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 8em;
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 0.8;
+  top: 500px;
+  transform: translate(950px, -200px);
+}
+.rotate {
+  transform: rotate(-270deg);
+}
+footer {
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  left: 200px;
+}
+.slider-container {
+  margin-top: 50px;
+  height: auto;
+  width: 50%;
+  border: 10px solid white;
+  border-radius: 5px;
+  overflow: hidden; /* Ensure only one image is visible at a time */
+  position: relative;
+  background: transparent;
+  background-color: white;
+}
+.slider {
+  display: flex;
+  width: 100%;
+  animation: slide 10s infinite;
+  transition: transform 0.5s ease-in-out;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  flex-shrink: 0;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(-200%);
+  }
+  60% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-100%);
+  }
+  80% {
+    transform: translateX(-100%);
+  }
+  90% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay .link {
+  color: white;
+  font-size: 1.5em;
+  margin: 0 10px;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 10px 20px;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.overlay .link:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+.slide:hover .overlay {
+  opacity: 1;
+}
+
+/* Media query for mobile devices */
+
+@media (max-width: 768px) {
+  #projects {
+    margin-top: 100px;
+    height: 50vh; /* Adjust height for smaller screens */
+  }
+
+  .slider-container {
+    top: 150px;
+    width: 100%; /* Use full width on smaller screens */
+    height: 100%;
+  }
+
+  .slider img {
+    width: 100%; /* Use full width on smaller screens */
+    height: 100%;
+    object-fit: cover; /* Ensure the whole image is visible on smaller screens */
+  }
 }

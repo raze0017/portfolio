@@ -8,6 +8,13 @@ import js from './icons/js.png'; // Import the image
 import python from './icons/python.png'; // Import the image
 import java from './icons/java.png'; // Import the image
 import me from './icons/me.jpeg';
+import todo from './icons/todo.png';
+import weather from './icons/weather.png';
+import battle from './icons/battleship.png';
+document.getElementById('battle').src = battle;
+document.getElementById('weather').src = weather;
+document.getElementById('todo').src = todo;
+
 document.getElementById('me').src = me;
 // Set the image source dynamically
 document.getElementById('html-icon').src = htmlIcon;
@@ -73,4 +80,15 @@ more.addEventListener('click', () => {
 
     right.style.opacity = '1';
   }
+});
+const slider = document.querySelector('.slider');
+
+slider.addEventListener('mouseover', () => {
+  slider.style.animationPlayState = 'paused';
+  slider.style.opacity = '0.5';
+});
+
+slider.addEventListener('mouseout', () => {
+  slider.style.animationPlayState = 'running';
+  slider.style.opacity = '1';
 });

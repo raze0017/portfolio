@@ -13,3 +13,51 @@
 .right1 {
   transition: 1s;
 }
+.menuname {
+  transform: rotate(-90deg);
+  font-size: 20px;
+  margin-left: 20px;
+  font-family: monospace;
+  font-weight: 700;
+}
+.left {
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+}
+.scroll {
+  transform: rotate(-270deg);
+  font-size: 25px;
+  top: -20px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+#scroll {
+  width: 20px;
+  height: 20px;
+  right: 100px;
+  padding: 5px;
+  transform: rotate(-90deg);
+}
+
+.left1 {
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+}
+.second {
+  transform: rotate(-270deg);
+  font-size: 25px;
+  top: -20px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+#second {
+  width: 20px;
+  height: 20px;
+  right: 100px;
+  padding: 5px;
+  transform: rotate(0);
+}
