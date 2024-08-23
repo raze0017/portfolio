@@ -131,7 +131,8 @@ header {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 0.8;
   top: 500px;
-  transform: translate(1250px, -500px);
+  transform: translate(950px, -450px);
+  position: static;
 }
 
 .rotate {
