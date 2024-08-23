@@ -134,6 +134,7 @@
   .me {
   }
   .detailed {
+    margin-top: 50px;
     width: 300px;
     height: auto;
     right: 200px;

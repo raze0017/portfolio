@@ -16,7 +16,7 @@
     left: 500px; /* Move 200px to the left */
     top: 350px; /* Move 100px down */
     transition: 1s;
-    transform: translate(260px, -120px);
+    transform: translate(280px, -120px);
   }
   .left1 {
     opacity: 0;
