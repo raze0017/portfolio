@@ -65,24 +65,25 @@ const detailed = document.querySelector('.detailed');
 const mee = document.querySelector('.me');
 const right = document.querySelector('.right1');
 more.addEventListener('click', () => {
-  if (detailed.style.right == '-500px') {
+  if (detailed.style.right == '-500px' || detailed.style.right == '') {
     detailed.style.right = '0';
     mee.style.left = '-300px';
     detailed.style.opacity = '1';
-
+    but.style.opacity = '0';
     body.style.left = '-800px';
     right.style.opacity = '0';
+    body.style.overflow = 'hidden';
   } else {
     detailed.style.right = '-500px';
     body.style.left = '0px';
     mee.style.left = '0px';
     detailed.style.opacity = '0';
-
+    but.style.opacity = '1';
     right.style.opacity = '1';
+    body.style.overflow = 'auto';
   }
 });
 const slider = document.querySelector('.slider');
-
 slider.addEventListener('mouseover', () => {
   slider.style.animationPlayState = 'paused';
   slider.style.opacity = '0.5';

@@ -4,6 +4,24 @@
   border-radius: 50%;
   border: 10px solid yellow;
 }
+@media (max-width: 500px) {
+  #me {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px solid yellow;
+  }
+  .me {
+    position: relative;
+    left: 500px; /* Move 200px to the left */
+    top: 350px; /* Move 100px down */
+    transition: 1s;
+    transform: translate(260px, -120px);
+  }
+  .left1 {
+    opacity: 0;
+  }
+}
 .me {
   position: relative;
   left: 0px; /* Move 200px to the left */

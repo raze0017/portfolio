@@ -43,7 +43,7 @@
   left: 5px;
   position: fixed;
   font-size: 3em;
-  z-index: 10; /* Ensure it is above other elements */
+  z-index: 1000; /* Ensure it is above other elements */
   transition: 0.75s;
   animation: pulse 1.5s ease-in 0.1s infinite;
   display: flex;
@@ -114,6 +114,61 @@
   font-family: monospace;
 }
 @media (max-width: 500px) {
+  img {
+    width: 15px;
+    height: 15px;
+    margin-right: 0px;
+  }
+  .about {
+    opacity: 0;
+  }
+  .text1 {
+    opacity: 0;
+  }
+  .scroll {
+    opacity: 0;
+  }
+  .more {
+    opacity: 0;
+  }
+  .me {
+  }
+  .detailed {
+    width: 300px;
+    height: auto;
+    right: 200px;
+    opacity: 1;
+    position: relative;
+    transform: translate(-350px, 0px);
+    transition: 1s;
+  }
+  .right1 {
+    opacity: 0;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  #python {
+    width: 50px;
+    height: 50px;
+  }
+  #html-icon,
+  #css-icon,
+  #c {
+    width: 40px;
+    height: 40px;
+  }
+  .lan {
+    font-size: 10px;
+    font-family: monospace;
+    font-weight: 600;
+  }
+  .languages {
+    display: flex;
+    flex-direction: row;
+  }
 }
 img {
   width: 50px;

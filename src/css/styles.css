@@ -133,9 +133,11 @@ header {
   top: 500px;
   transform: translate(950px, -350px);
 }
+
 .rotate {
   transform: rotate(-270deg);
 }
+
 footer {
   height: 55px;
   display: flex;
@@ -147,12 +149,10 @@ footer {
   width: 100%;
   justify-content: center;
   align-items: center;
-  left: 200px;
 }
 .slider-container {
-  margin-top: 50px;
+  width: 100%;
   height: auto;
-  width: 75%;
   border: 10px solid white;
   border-radius: 5px;
   overflow: hidden; /* Ensure only one image is visible at a time */
@@ -168,10 +168,52 @@ footer {
 }
 .slider img {
   width: 100%;
-  height: 100%;
-
+  height: auto;
+  background-position: center;
+  background-size: cover;
   object-fit: cover;
-  flex-shrink: 0;
+  object-fit: cover;
+}
+
+@media (max-width: 500px) {
+  #projects {
+    margin-top: 100px;
+    height: auto; /* Adjust to fit content */
+  }
+  .container {
+    background: none;
+  }
+
+  .slider-container {
+    top: 150px;
+    width: 100%;
+    max-width: none; /* Allow full width on smaller screens */
+    height: auto;
+  }
+  .slider img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the whole image is visible */
+  }
+
+  .balance .rotate {
+    font-size: 40px; /* Adjust text size for better readability on small screens */
+  }
+}
+@media (max-width: 500px) {
+  .balance {
+    display: flex;
+
+    font-weight: 800;
+    line-height: 0.8;
+    top: 500px;
+    transform: translate(0, -150px);
+    font-size: 50px;
+  }
+  .rotate {
+    font-size: 4em;
+    transform: rotate(0deg);
+  }
 }
 @keyframes slide {
   0% {
@@ -208,22 +250,3 @@ footer {
 }
 
 /* Media query for mobile devices */
-
-@media (max-width: 768px) {
-  #projects {
-    margin-top: 100px;
-    height: 50vh; /* Adjust height for smaller screens */
-  }
-
-  .slider-container {
-    top: 150px;
-    width: 100%; /* Use full width on smaller screens */
-    height: 100%;
-  }
-
-  .slider img {
-    width: 100%; /* Use full width on smaller screens */
-    height: 100%;
-    object-fit: cover; /* Ensure the whole image is visible on smaller screens */
-  }
-}
